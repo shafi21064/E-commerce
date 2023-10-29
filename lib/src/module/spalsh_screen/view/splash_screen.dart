@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/module/skip_screen/view/first_skip.dart';
+import 'package:internship_project/src/module/skip_screen/view/skip_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

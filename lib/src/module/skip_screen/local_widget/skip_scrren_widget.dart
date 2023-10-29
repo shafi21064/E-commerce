@@ -5,6 +5,7 @@ import 'package:internship_project/src/data/global_widget/text_widget/text_bold.
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/nav_bar/nav_bar.dart';
 
 class SkipScreenWidget extends StatelessWidget {
   final String titleImage, titleText, bottomIcon;
@@ -57,10 +58,17 @@ class SkipScreenWidget extends StatelessWidget {
           alignment: Alignment.bottomRight,
           child: Container(
             margin: EdgeInsets.only(right: 50.w),
-            child: TextMedium(
-                text: 'SKIP',
-                color: CustomColor.kingBlackText,
-                fontSize: 17.sp
+            child: InkWell(
+              onTap: (){
+                Navigator.pushAndRemoveUntil(
+                    context, MaterialPageRoute(builder: (context)=> NavBar()),
+                        (route) => false);
+              },
+              child: TextMedium(
+                  text: 'SKIP',
+                  color: CustomColor.kingBlackText,
+                  fontSize: 17.sp
+              ),
             ),
           ),
         ),

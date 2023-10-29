@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class TextMedium extends StatelessWidget {
   final String text;
-  final Color color;
+  final Color? color;
   final double? fontSize, height;
   const TextMedium({
     super.key,
     required this.text,
-    required this.color,
+    this.color,
     required this.fontSize,
     this.height
   });
