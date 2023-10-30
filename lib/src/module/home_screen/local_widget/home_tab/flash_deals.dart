@@ -5,11 +5,13 @@ import 'package:internship_project/src/data/global_widget/text_widget/text_mediu
 class FlashDeals extends StatelessWidget {
   final String imagePath, productPrice;
   final Color priceTagColor;
+  final double fontSize;
   const FlashDeals({
     super.key,
     required this.imagePath,
     required this.priceTagColor,
-    required this.productPrice
+    required this.productPrice,
+    required this.fontSize
   });
 
   @override
@@ -37,8 +39,8 @@ class FlashDeals extends StatelessWidget {
               borderRadius: BorderRadius.circular(5.r)
             ),
             child: TextMedium(
-              text: '$productPrice SAR',
-              fontSize: 11.sp,
+              text: productPrice,
+              fontSize: fontSize,
               color: Colors.white,
             ),
           ),

@@ -4,6 +4,7 @@ import 'package:internship_project/src/data/global_widget/space_widget/space_in_
 import 'package:internship_project/src/data/global_widget/text_widget/text_light_italic.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/home_screen/local_widget/home_tab/daily_feature.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/flash_deals.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/timer.dart';
 
@@ -13,7 +14,7 @@ class DailyFeatureItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.fromLTRB(16.w, 11.h, 16.w, 12.h),
+        padding: EdgeInsets.fromLTRB(16.w, 11.h, 16.w, 8 .h),
         height: 146.h,
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
@@ -57,21 +58,18 @@ class DailyFeatureItem extends StatelessWidget {
                     ],
                   ),
                 ),
-                const FlashDeals(
-                  imagePath: 'assets/images/mouse.png',
-                  priceTagColor: Color(0xff68C037),
-                  productPrice: '230.00',
+                const DailyFeature(
+                    imgPath: 'assets/images/mouse.png',
+                    cardName: '550.00 SAR'
                 ),
-                const FlashDeals(
-                  imagePath: 'assets/images/gaming-pc.png',
-                  priceTagColor: Color(0xff094D82),
-                  productPrice: '1230.00',
+                const DailyFeature(
+                    imgPath: 'assets/images/gaming-pc.png',
+                    cardName: '550.00 SAR'
                 ),
-                const FlashDeals(
-                  imagePath: 'assets/images/headphones.png',
-                  priceTagColor: Color(0xff2B2B2B),
-                  productPrice: '560.00',
-                )
+                const DailyFeature(
+                    imgPath: 'assets/images/headphones.png',
+                    cardName: '550.00 SAR'
+                ),
               ],
             ),
           ],

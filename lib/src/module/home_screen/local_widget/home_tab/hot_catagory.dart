@@ -4,10 +4,9 @@ import 'package:internship_project/src/data/global_widget/space_widget/space_in_
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/flash_deals.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/timer.dart';
 
-class FlashDealItem extends StatelessWidget {
-  const FlashDealItem({super.key});
+class HotCategory extends StatelessWidget {
+  const HotCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,35 +15,16 @@ class FlashDealItem extends StatelessWidget {
         height: 146.h,
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: Color(0xffFED3B9),
             borderRadius: BorderRadius.circular(8.r)
         ),
         child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextMedium(
-                    text: 'Flash Deals',
-                    fontSize: 13.sp,
-                  color: CustomColor.cardTextColor,
-                ),
-                SizedBox(
-                  height: 17.h,
-                  width: 66.w,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      SizedBox(
-                        height: 14.h,
-                        width: 14.w,
-                        child: Image.asset('assets/icons/flash.png'),
-                      ),
-                      CountdownWidget(duration: Duration(hours: 10)),
-                    ],
-                  ),
-                )
-              ],
+            TextMedium(
+              text: 'Hot Category',
+              fontSize: 13.sp,
+              color: CustomColor.cardTextColor,
             ),
             SpaceInHeight(height: 7.h),
             Row(
@@ -53,26 +33,26 @@ class FlashDealItem extends StatelessWidget {
                 FlashDeals(
                   imagePath: 'assets/images/Gaming-Chair.png',
                   priceTagColor: CustomColor.primaryColor,
-                  productPrice: '550.00 SAR',
-                  fontSize: 11.sp,
+                  productPrice: 'G11 Chair',
+                  fontSize: 8.sp,
                 ),
                 FlashDeals(
                   imagePath: 'assets/images/mouse.png',
                   priceTagColor: Color(0xff68C037),
-                  productPrice: '230.00',
-                  fontSize: 11.sp,
+                  productPrice: 'G11 Mouse',
+                  fontSize: 8.sp,
                 ),
                 FlashDeals(
                   imagePath: 'assets/images/gaming-pc.png',
                   priceTagColor: Color(0xff094D82),
-                  productPrice: '1230.00',
-                  fontSize: 11.sp,
+                  productPrice: 'Gaming PC',
+                  fontSize: 8.sp,
                 ),
                 FlashDeals(
                   imagePath: 'assets/images/headphones.png',
                   priceTagColor: Color(0xff2B2B2B),
-                  productPrice: '560.00',
-                  fontSize: 11.sp,
+                  productPrice: 'G11 Headphone',
+                  fontSize: 8.sp,
                 )
               ],
             ),
