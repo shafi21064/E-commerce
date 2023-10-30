@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-class TextBold extends StatelessWidget {
+class TextLightItalic extends StatelessWidget {
   final String text;
   final Color color;
   final double? fontSize, height;
-  const TextBold({
+  const TextLightItalic({
     super.key,
     required this.text,
     required this.color,
@@ -19,7 +19,7 @@ class TextBold extends StatelessWidget {
       text,
       style: TextStyle(
         color: color,
-        fontFamily: 'RobotoBold',
+        fontFamily: 'RobotoLightItalic',
         fontSize: fontSize,
         height: height
       ),
