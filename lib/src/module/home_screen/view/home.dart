@@ -5,10 +5,9 @@ import 'package:internship_project/src/data/global_widget/text_widget/text_mediu
 import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/custom_indicator.dart';
 import 'package:internship_project/src/module/home_screen/view/computer&office_tab.dart';
-import 'package:internship_project/src/module/home_screen/view/home_tab.dart';
+import 'package:internship_project/src/module/home_screen/view/home_tab/home_tab.dart';
 import 'package:internship_project/src/module/home_screen/view/phone_accessories_tab.dart';
 import 'package:internship_project/src/module/home_screen/view/toys_tab.dart';
-
 import 'gaming_pc_tab.dart';
 
 class Home extends StatefulWidget {

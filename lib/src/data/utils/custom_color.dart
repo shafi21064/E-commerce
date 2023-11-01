@@ -9,6 +9,7 @@ class CustomColor{
   static Color searchBarColor = const Color(0xffE8E8E8);
   static Color searchBarTextColor = const Color(0xffAFAFAF);
   static Color cardTextColor = const Color(0xff434343);
+  static Color ratingBlue = const Color(0xff021E65);
 
   // List<Color> customColor =[];
 }
