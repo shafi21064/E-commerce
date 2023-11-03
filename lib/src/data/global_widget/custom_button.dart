@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 
-class FilledCustomButton extends StatelessWidget {
+class CustomButton extends StatelessWidget {
   final Color buttonColor, nameColor;
   final String buttonName;
   final dynamic onTap;
-  const FilledCustomButton({
+  const CustomButton({
     super.key,
     required this.buttonColor,
     required this.buttonName,
@@ -19,20 +19,20 @@ class FilledCustomButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        height: 36.h,
-        width: 152.w,
-        decoration: BoxDecoration(
-          color: buttonColor,
-          borderRadius: BorderRadius.circular(5.r),
-          //border: Border.all(color: const Color(0xffFC6600))
-        ),
-        child: Center(
-          child: TextMedium(
-            text: buttonName,
-            fontSize: 14.sp,
-            color: nameColor,
+          height: 36.h,
+          width: 152.w,
+          decoration: BoxDecoration(
+              color: buttonColor,
+              borderRadius: BorderRadius.circular(5.r),
+              //border: Border.all(color: const Color(0xff959595))
           ),
-        )
+          child: Center(
+            child: TextMedium(
+              text: buttonName,
+              fontSize: 14.sp,
+              color: nameColor,
+            ),
+          )
       ),
     );
   }

@@ -5,18 +5,21 @@ import 'package:internship_project/src/data/utils/custom_color.dart';
 
 class CartCustomButton extends StatelessWidget {
   final Color buttonColor;
-  final String buttonName;
+  final String buttonName, itemInCart;
+  final dynamic onTap;
   const CartCustomButton({
     super.key,
     required this.buttonColor,
-    required this.buttonName
+    required this.buttonName,
+    required this.itemInCart,
+    required this.onTap
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
         height: 36.h,
-        width: 152.w,
+        width: 124.w,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(5.r),
@@ -27,10 +30,13 @@ class CartCustomButton extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: TextMedium(
-                text: buttonName,
-                fontSize: 14.sp,
-                color: CustomColor.primaryColor,
+              child: InkWell(
+                onTap: onTap,
+                child: TextMedium(
+                  text: buttonName,
+                  fontSize: 14.sp,
+                  color: CustomColor.primaryColor,
+                ),
               ),
             ),
             Align(
@@ -43,7 +49,7 @@ class CartCustomButton extends StatelessWidget {
                   color: Color(0xffFC6600).withOpacity(.3)
                 ),
                 child: TextMedium(
-                   text: '1',
+                   text: itemInCart,
                   fontSize: 16.sp,
                   color: CustomColor.ratingBlue,
                 ),

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/all_product_provider.dart';
-import 'package:provider/provider.dart';
 
 class ProductPic extends StatelessWidget {
 String productImage;

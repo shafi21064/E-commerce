@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:internship_project/src/data/global_widget/custom_app_bar.dart';
+import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/cart_screen/local_widget/bucket_item_list.dart';
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -6,7 +9,18 @@ class Cart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('cart'),),
+      backgroundColor: CustomColor.backgroundColor,
+      body: SafeArea(
+        child:  ListView(
+          children: [
+            CustomAppBar(
+              appBarTitle: 'Shopping Cart',
+              onTap: ()=> Navigator.pop(context),
+            ),
+            const BucketItemList(),
+          ],
+        ),
+      )
     );
   }
 }

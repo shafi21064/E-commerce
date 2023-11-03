@@ -6,13 +6,22 @@ import 'package:internship_project/src/data/global_widget/text_widget/text_mediu
 import 'package:internship_project/src/data/utils/custom_color.dart';
 
 class HeaderPart extends StatelessWidget {
-  const HeaderPart({super.key});
+
+  final String productSpecialPrice, productPrice, productSubtitle;
+
+  const HeaderPart({
+    super.key,
+    required this.productSpecialPrice,
+    required this.productPrice,
+    required this.productSubtitle,
+
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 18.w),
-      height: 155.h,
+      height: 156.h,
       //color: Colors.red,
       child: Column(
         children: [
@@ -20,21 +29,21 @@ class HeaderPart extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextMedium(
-                  text: '500.00 SAR',
+                  text: '${productSpecialPrice.toString()} SAR',
                   fontSize: 21.sp,
                 color: CustomColor.primaryColor,
               ),
-              Icon(Icons.share, color: Colors.black,)
+              const Icon(Icons.share, color: Colors.black,)
             ],
           ),
           Row(
             children: [
               Text(
-                '46,0000.00XAF',
+                '${productPrice.toString()}+ SAR',
                 style: TextStyle(
                   fontFamily: 'RobotoMedium',
                   fontSize: 16.sp,
-                  color: Color(0xffCBCBCB),
+                  color: const Color(0xffCBCBCB),
                   decoration: TextDecoration.lineThrough
                 ),
               ),
@@ -44,16 +53,16 @@ class HeaderPart extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: 'RobotoMedium',
                     fontSize: 16.sp,
-                    color: Color(0xff868686),
+                    color: const Color(0xff868686),
                 ),
               ),
             ],
           ),
           SpaceInHeight(height: 13.h),
           TextMedium(
-              text: "Strategies de Survie des Populations Africaines dans une Economie Mondialisée - L’expérience Camerounaise.",
+              text: productSubtitle,
               fontSize: 16.sp,
-            color: Color(0xff333333),
+            color: const Color(0xff333333),
           ),
           SpaceInHeight(height: 12.h),
           Row(
@@ -63,7 +72,7 @@ class HeaderPart extends StatelessWidget {
               TextMedium(
                   text: '4.6',
                   fontSize: 16.sp,
-                color: Color(0xff868686),
+                color: const Color(0xff868686),
               )
             ],
           )

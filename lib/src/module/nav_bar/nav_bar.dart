@@ -5,6 +5,7 @@ import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/account_screen/view/account.dart';
 import 'package:internship_project/src/module/cart_screen/view/cart.dart';
 import 'package:internship_project/src/module/category_screen/view/category.dart';
+import 'package:internship_project/src/module/favorite/view/favorite_list.dart';
 import 'package:internship_project/src/module/home_screen/view/home.dart';
 import 'package:internship_project/src/module/wishlist_screen/view/wishlist.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
@@ -34,7 +35,7 @@ final controller = PersistentTabController(initialIndex: 2);
 List<Widget> _buildScreens() {
   return [
     const Category(),
-    const WishList(),
+    const Favorite(),
     const Home(),
     const Cart(),
     const Account(),

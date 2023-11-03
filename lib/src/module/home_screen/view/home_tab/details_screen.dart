@@ -11,15 +11,31 @@ import 'package:internship_project/src/module/home_screen/local_widget/home_tab/
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/tab_bar_view.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/voucher_part.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsScreen extends StatefulWidget {
 String productImage;
+final String productSpecialPrice, productPrice,productSubtitle;
+final int index;
+final dynamic onPress;
+final bool favorite;
     DetailsScreen({
       super.key,
-      required this.productImage
+      required this.productImage,
+      required this.productSpecialPrice,
+      required this.productPrice,
+      required this.productSubtitle,
+      required this.index,
+      required this.onPress,
+      required this.favorite
     });
 
   @override
+  State<DetailsScreen> createState() => _DetailsScreenState();
+}
+
+class _DetailsScreenState extends State<DetailsScreen> {
+  @override
   Widget build(BuildContext context) {
+
 
     return Scaffold(
         backgroundColor: CustomColor.backgroundColor,
@@ -31,10 +47,14 @@ String productImage;
                      child: Column(
                        children: [
                          ProductPic(
-                         productImage: productImage
+                         productImage: widget.productImage
                          ),
                          SpaceInHeight(height: 27.h),
-                         const HeaderPart(),
+                          HeaderPart(
+                           productPrice: widget.productPrice,
+                           productSpecialPrice: widget.productSpecialPrice,
+                           productSubtitle: widget.productSubtitle,
+                         ),
                          SpaceInHeight(height: 24.h),
                          const VoucherPart(),
                          SpaceInHeight(height: 16.h),
@@ -48,7 +68,11 @@ String productImage;
                      ),
                    ),
                  ),
-                 const CustomButtonForBuy()
+                 CustomButtonForBuy(
+                   index: widget.index,
+                   favorite: widget.favorite,
+                   onPress: widget.onPress,
+                 )
                ],
              ),
            ),

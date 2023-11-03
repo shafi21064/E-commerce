@@ -14,11 +14,11 @@ class DailyFeatureItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.fromLTRB(16.w, 11.h, 16.w, 8 .h),
+        padding: EdgeInsets.fromLTRB(16.w, 11.h, 16.w, 5.h),
         height: 146.h,
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
-            color: Color(0xffE4E4FC),
+            color: const Color(0xffE4E4FC),
             borderRadius: BorderRadius.circular(8.r)
         ),
         child:  Column(
