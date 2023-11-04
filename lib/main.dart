@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/controller/checkbox_controller.dart';
 import 'package:internship_project/src/controller/item_provider.dart';
+import 'package:internship_project/src/module/log_in&sign_uo/view/log_in.dart';
 import 'package:internship_project/src/module/spalsh_screen/view/splash_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -20,8 +22,10 @@ class MyApp extends StatelessWidget {
       // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) {
         return MultiProvider(
-          providers: [ChangeNotifierProvider(create: (_) => ItemProvider())],
-          child: MaterialApp(
+          providers: [
+            ChangeNotifierProvider(create: (_) => ItemProvider()),
+          ],
+          child: const MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'First Method',
             home: SplashScreen(),

@@ -26,7 +26,7 @@ class CheckoutItem extends StatelessWidget {
   Widget build(BuildContext context) {
     var itemProvider = Provider.of<ItemProvider>(context);
     return Container(
-      margin: EdgeInsets.all(10.w),
+      margin: EdgeInsets.fromLTRB(10.w, 0.h, 10.w, 10.h),
       padding: const EdgeInsets.all(16),
       height: 131.h,
       width: 393.w,

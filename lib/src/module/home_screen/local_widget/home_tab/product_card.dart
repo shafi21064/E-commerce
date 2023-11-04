@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/controller/checkbox_controller.dart';
+import 'package:internship_project/src/data/global_widget/cart_icon.dart';
 import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
@@ -61,7 +63,7 @@ class ProductCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextMedium(
-                    text: productPrice,
+                    text: '$productPrice SAR',
                     fontSize: 12.sp,
                   color: CustomColor.primaryColor,
                 ),
@@ -70,8 +72,10 @@ class ProductCard extends StatelessWidget {
                     width: 26.w,
                     child: InkWell(
                       onTap: onCartTap,
-                        child: addToCart? Image.asset('assets/icons/little_cart.png',  color: Colors.red, ) :
-                        Image.asset('assets/icons/little_cart.png',)))
+                        child: addToCart?
+                        CartIcon(color: CustomColor.primaryColor, iconColor: Colors.white,) :
+                        const CartIcon(color: Color(0xffF4F4F4), iconColor: Color(0xff3B3B3B),)
+                    ))
               ],
             )
           ],

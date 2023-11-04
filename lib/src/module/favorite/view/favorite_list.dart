@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:internship_project/src/data/global_widget/text_widget.dart';
-import 'package:internship_project/src/module/checkout/checkout_pakage.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/data/global_widget/custom_app_bar.dart';
+import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
+import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/favorite/local_widget/favorite_item_list.dart';
 
 class Favorite extends StatelessWidget {
@@ -9,17 +11,24 @@ class Favorite extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: TextWidget(
-          title: 'Favorite',
-          color: Colors.blue,
-          fontSize: 20,
-        ),
-        centerTitle: true,
-        backgroundColor: Colors.white,
-      ),
       backgroundColor: CustomColor.backgroundColor,
-      body: FavoriteItemList(),
+      body:
+        SafeArea(
+          child:  Column(
+            children: [
+              CustomAppBar(
+                appBarTitle: 'WishList',
+                onTap: ()=> Navigator.pop(context),
+              ),
+              SpaceInHeight(height: 17.h),
+              Expanded(
+                  child: ListView(
+                      children: const [
+                      FavoriteItemList()
+                      ])),
+            ],
+          ),
+        )
     );
   }
 }

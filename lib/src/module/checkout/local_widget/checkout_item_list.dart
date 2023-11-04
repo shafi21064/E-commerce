@@ -13,10 +13,10 @@ class CheckoutItemList extends StatelessWidget {
   Widget build(BuildContext context) {
     var itemProvider = Provider.of<ItemProvider>(context);
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height,
+      height: 290.h,
       width: MediaQuery.sizeOf(context).width,
       child: ListView.builder(
-        physics: const NeverScrollableScrollPhysics(),
+        //physics: const NeverScrollableScrollPhysics(),
         itemCount: itemProvider.checkout.length,
           itemBuilder: (context, index){
           return CheckoutItem(

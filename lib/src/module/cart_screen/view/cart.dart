@@ -11,13 +11,17 @@ class Cart extends StatelessWidget {
     return Scaffold(
       backgroundColor: CustomColor.backgroundColor,
       body: SafeArea(
-        child:  ListView(
+        child:  Column(
           children: [
             CustomAppBar(
               appBarTitle: 'Shopping Cart',
               onTap: ()=> Navigator.pop(context),
             ),
-            const BucketItemList(),
+            Expanded(
+                child: ListView(
+                    children: const [
+                      BucketItemList()
+                    ])),
           ],
         ),
       )

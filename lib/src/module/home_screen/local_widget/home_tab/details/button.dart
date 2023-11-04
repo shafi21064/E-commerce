@@ -38,8 +38,8 @@ class CustomButtonForBuy extends StatelessWidget {
                 child: SizedBox(
                   height: 22.h,
                   width: 25.w,
-                  child: favorite? Image.asset('assets/icons/wishlist.png', color: CustomColor.primaryColor,) :
-                  Image.asset('assets/icons/wishlist.png')
+                  child: favorite? Image.asset('assets/icons/wishlist.png',  color: Colors.red, ) :
+                  Image.asset('assets/icons/wishlist.png',)
                 ),
               ),
                CartCustomButton(

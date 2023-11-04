@@ -9,6 +9,7 @@ import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/checkout/checkout_pakage.dart';
 import 'package:internship_project/src/module/checkout/local_widget/checkout_item_list.dart';
 import 'package:internship_project/src/module/checkout/local_widget/contact_number.dart';
+import 'package:internship_project/src/module/checkout/local_widget/place_oder_button.dart';
 import 'package:internship_project/src/module/checkout/local_widget/title_card.dart';
 import 'package:internship_project/src/module/checkout/local_widget/name&address.dart';
 import 'package:provider/provider.dart';
@@ -23,37 +24,46 @@ class CheckOut extends StatelessWidget {
     return Scaffold(
       backgroundColor: CustomColor.backgroundColor,
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              CustomAppBar(
-                onTap: (){
-                  //itemProvider.removeFromCheckout(index);
-                  Navigator.pop(context);
-                },
-                appBarTitle: 'Checkout information',
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    CustomAppBar(
+                      onTap: (){
+                        //itemProvider.removeFromCheckout(index);
+                        Navigator.pop(context);
+                      },
+                      appBarTitle: 'Checkout information',
+                    ),
+                    SpaceInHeight(height: 15.h),
+                    const TitleCard(
+                      cardTitle: 'Billing Address',
+                      cardButton: 'CHANGE',
+                    ),
+                    const NameAndAddress(),
+                    const TitleCard(
+                        cardTitle: 'Contact Number',
+                        cardButton: ''),
+                    const ContactNumber(),
+                    const TitleCard(
+                        cardTitle: 'Products',
+                        cardButton: ''),
+                    SpaceInHeight(height: 12.h),
+                    const CheckoutItemList(),
+                    const TitleCard(
+                        cardTitle: 'Order Summary',
+                        cardButton: ''),
+                    SpaceInHeight(height: 13.h),
+                    const PaymentDetails(),
+                    SpaceInHeight(height: 14.h),
+                  ],
+                ),
               ),
-              SpaceInHeight(height: 15.h),
-              const TitleCard(
-                cardTitle: 'Billing Address',
-                cardButton: 'CHANGE',
-              ),
-              const NameAndAddress(),
-              const TitleCard(
-                  cardTitle: 'Contact Number',
-                  cardButton: ''),
-              const ContactNumber(),
-              const TitleCard(
-                  cardTitle: 'Products',
-                  cardButton: ''),
-              SpaceInHeight(height: 12.h),
-              const CheckoutItemList(),
-              const TitleCard(
-                  cardTitle: 'Order Summary',
-                  cardButton: ''),
-              PaymentDetails()
-            ],
-          ),
+            ),
+            const PlaceOrderButton()
+          ],
         ),
       )
     );

@@ -49,15 +49,23 @@ class RelatedProduct extends StatelessWidget {
               return ProductCard(
                 onCartTap: (){
                   itemProvider.setAddToCart(index);
-                  final snackBar = SnackBar(
-                    backgroundColor: CustomColor.primaryColor,
-                      content: const Text('Added to Cart')
-                  );
-                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  if(itemProvider.itemList[index]['in_cart'] == true){
+                    final snackBar = SnackBar(
+                        backgroundColor: CustomColor.primaryColor,
+                        content: const Text('Added to Cart')
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }else{
+                    final snackBar = SnackBar(
+                        backgroundColor: CustomColor.primaryColor,
+                        content: const Text('Remove from Cart')
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  }
                 },
                 productImage: itemProvider.itemList[index]['image']['little_size'],
                 productName: itemProvider.itemList[index]['name'],
-                productPrice: itemProvider.itemList[index]['price'].toString(),
+                productPrice: itemProvider.itemList[index]['special_price'].toString(),
                   addToCart: itemProvider.itemList[index]['in_cart']
               );
             },),

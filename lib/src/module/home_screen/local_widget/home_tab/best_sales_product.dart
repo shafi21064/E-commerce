@@ -5,6 +5,7 @@ import 'package:internship_project/src/controller/item_provider.dart';
 import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
+import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/product_card.dart';
 import 'package:internship_project/src/module/home_screen/view/home_tab/details_screen.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
@@ -36,6 +37,21 @@ class _BestSalesProductState extends State<BestSalesProduct> {
           return ProductCard(
             onCartTap: (){
                 itemProvider.setAddToCart(index);
+                if(itemProvider.itemList[index]['in_cart'] == true){
+                  final snackBar = SnackBar(
+                      backgroundColor: CustomColor.primaryColor,
+                      content: const Text('Added to Cart')
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+                else{
+                  final snackBar = SnackBar(
+                      backgroundColor: CustomColor.primaryColor,
+                      content: const Text('Remove from Cart')
+                  );
+                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                }
+
             },
             onTap: (){
               pushNewScreen(
@@ -44,6 +60,19 @@ class _BestSalesProductState extends State<BestSalesProduct> {
                   onPress:(){
                     setState(() {
                       itemProvider.setIsFavorite(index);
+                      if(itemProvider.itemList[index]['is_favorite'] == true){
+                        final snackBar = SnackBar(
+                            backgroundColor: CustomColor.primaryColor,
+                            content: const Text('Added to Wishlist')
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }else{
+                        final snackBar = SnackBar(
+                            backgroundColor: CustomColor.primaryColor,
+                            content: const Text('Remove from Wishlist')
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                      }
                     });
                   },
                     productImage: itemProvider.itemList[index]['image']['big_size'],
@@ -59,7 +88,7 @@ class _BestSalesProductState extends State<BestSalesProduct> {
             },
             productImage: itemProvider.itemList[index]['image']['little_size'],
             productName: itemProvider.itemList[index]['name'],
-            productPrice: itemProvider.itemList[index]['price'].toString(),
+            productPrice: itemProvider.itemList[index]['special_price'].toString(),
             addToCart: itemProvider.itemList[index]['in_cart'],
           );
         },),

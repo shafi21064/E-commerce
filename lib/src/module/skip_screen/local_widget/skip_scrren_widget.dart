@@ -5,6 +5,7 @@ import 'package:internship_project/src/data/global_widget/text_widget/text_bold.
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/log_in&sign_uo/view/log_in.dart';
 import 'package:internship_project/src/module/nav_bar/nav_bar.dart';
 
 class SkipScreenWidget extends StatelessWidget {
@@ -61,7 +62,7 @@ class SkipScreenWidget extends StatelessWidget {
             child: InkWell(
               onTap: (){
                 Navigator.pushAndRemoveUntil(
-                    context, MaterialPageRoute(builder: (context)=> NavBar()),
+                    context, MaterialPageRoute(builder: (context)=> const LogInScreen()),
                         (route) => false);
               },
               child: TextMedium(

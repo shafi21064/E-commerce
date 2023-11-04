@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/module/checkout/local_widget/edit_button.dart';
+import 'package:internship_project/src/module/checkout/local_widget/edit_contact_number.dart';
 
 import '../../../data/global_widget/text_widget/text_regular.dart';
 
@@ -22,16 +24,18 @@ class ContactNumber extends StatelessWidget {
                   fontSize: 16.sp),
             ],
           ),
-          Container(
-            height: 31.h,
-            width: 31.w,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: const Color(0xffDBDBDB)),
-                color: const Color(0xffEAEAEA)
-            ),
-            child: const Icon(Icons.edit, size: 15),
-          )
+          EditButton(onTap: (){
+            showModalBottomSheet<void>(
+              showDragHandle: true,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(17.r))),
+              context: context,
+              builder: (BuildContext context) {
+                return EditContactNumber();
+              },
+            );
+          })
         ],
       ),
     );;

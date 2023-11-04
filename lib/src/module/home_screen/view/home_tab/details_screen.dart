@@ -11,7 +11,7 @@ import 'package:internship_project/src/module/home_screen/local_widget/home_tab/
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/tab_bar_view.dart';
 import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/voucher_part.dart';
 
-class DetailsScreen extends StatefulWidget {
+class DetailsScreen extends StatelessWidget {
 String productImage;
 final String productSpecialPrice, productPrice,productSubtitle;
 final int index;
@@ -29,11 +29,6 @@ final bool favorite;
     });
 
   @override
-  State<DetailsScreen> createState() => _DetailsScreenState();
-}
-
-class _DetailsScreenState extends State<DetailsScreen> {
-  @override
   Widget build(BuildContext context) {
 
 
@@ -47,13 +42,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
                      child: Column(
                        children: [
                          ProductPic(
-                         productImage: widget.productImage
+                         productImage: productImage
                          ),
                          SpaceInHeight(height: 27.h),
                           HeaderPart(
-                           productPrice: widget.productPrice,
-                           productSpecialPrice: widget.productSpecialPrice,
-                           productSubtitle: widget.productSubtitle,
+                           productPrice: productPrice,
+                           productSpecialPrice: productSpecialPrice,
+                           productSubtitle: productSubtitle,
                          ),
                          SpaceInHeight(height: 24.h),
                          const VoucherPart(),
@@ -69,9 +64,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                    ),
                  ),
                  CustomButtonForBuy(
-                   index: widget.index,
-                   favorite: widget.favorite,
-                   onPress: widget.onPress,
+                   index: index,
+                   favorite: favorite,
+                   onPress: onPress,
                  )
                ],
              ),

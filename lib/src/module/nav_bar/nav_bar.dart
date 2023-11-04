@@ -7,7 +7,6 @@ import 'package:internship_project/src/module/cart_screen/view/cart.dart';
 import 'package:internship_project/src/module/category_screen/view/category.dart';
 import 'package:internship_project/src/module/favorite/view/favorite_list.dart';
 import 'package:internship_project/src/module/home_screen/view/home.dart';
-import 'package:internship_project/src/module/wishlist_screen/view/wishlist.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
 
 class NavBar extends StatelessWidget {
