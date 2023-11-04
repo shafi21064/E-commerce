@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/sign_button.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget.dart';
+import '../checkout_pakage.dart';
 
 class ConfirmMessage extends StatelessWidget {
   const ConfirmMessage({super.key});
@@ -16,8 +14,8 @@ class ConfirmMessage extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            TextWidget(
-                title: 'Your order is confirmed!',
+            TextMedium(
+                text: 'Your order is confirmed!',
                 fontSize: 20.sp,
                 color: Color(0xff414141)),
             SpaceInHeight(height: 20.h),

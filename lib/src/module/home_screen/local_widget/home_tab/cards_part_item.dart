@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/card_part.dart';
+import '../../home_package.dart';
+
 
 class CardPartItem extends StatelessWidget {
   const CardPartItem({super.key});

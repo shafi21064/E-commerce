@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/button.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/header_part.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/product_pic.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/related_product.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/review&rating.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/start_rating.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/tab_bar_view.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/voucher_part.dart';
+import '../../home_package.dart';
+
 
 class DetailsScreen extends StatelessWidget {
 String productImage;

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/custom_app_bar.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/favorite/local_widget/favorite_item_list.dart';
+
+import '../favorite_package.dart';
+
 
 class Favorite extends StatelessWidget {
   const Favorite({super.key});

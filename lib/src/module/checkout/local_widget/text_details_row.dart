@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/text_widget.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
+import '../checkout_pakage.dart';
 
 class TextDetailsRow extends StatelessWidget {
   String pricingPurpose, price;
@@ -18,8 +17,8 @@ class TextDetailsRow extends StatelessWidget {
             fontSize: 14.sp,
             color: color
         ),
-        TextWidget(
-            title: price,
+        TextRegular(
+            text: price,
             fontSize: 14.sp,
             color: color
         )

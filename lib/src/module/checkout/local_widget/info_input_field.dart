@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
+import '../checkout_pakage.dart';
 
 class InfoInputForm extends StatelessWidget {
   final String title, hintText;

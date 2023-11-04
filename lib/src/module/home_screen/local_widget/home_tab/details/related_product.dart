@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/all_product_provider.dart';
-import 'package:internship_project/src/controller/item_provider.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/product_card.dart';
 import 'package:provider/provider.dart';
+import '../../../home_package.dart';
 
 class RelatedProduct extends StatelessWidget {
   const RelatedProduct({super.key});
@@ -39,7 +33,7 @@ class RelatedProduct extends StatelessWidget {
           GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: ProductProvider().products.length,
+            itemCount: itemProvider.itemList.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
               mainAxisSpacing: 5,

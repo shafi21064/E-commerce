@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:internship_project/src/module/checkout/local_widget/confi_background.dart';
-import 'package:internship_project/src/module/checkout/local_widget/confirm_message.dart';
+import '../checkout_pakage.dart';
 
 class ConfirmOrder extends StatelessWidget {
   const ConfirmOrder({super.key});

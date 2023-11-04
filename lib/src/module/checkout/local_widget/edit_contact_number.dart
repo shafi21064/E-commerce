@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/sign_button.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/module/checkout/local_widget/info_input_field.dart';
+import '../checkout_pakage.dart';
 
 class EditContactNumber extends StatelessWidget {
   const EditContactNumber({super.key});

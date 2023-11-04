@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/start_rating.dart';
 import 'package:smooth_star_rating_null_safety/smooth_star_rating_null_safety.dart';
+
+import '../../../home_package.dart';
+
 
 
 class ReviewsAndRating extends StatelessWidget {

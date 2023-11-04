@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/flash_deals.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/timer.dart';
+import '../../home_package.dart';
+
 
 class FlashDealItem extends StatelessWidget {
   const FlashDealItem({super.key});

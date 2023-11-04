@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/cards_part_item.dart';
+import '../../home_package.dart';
+
 
 class CardPart extends StatelessWidget {
   final Color startColor, endColor ;

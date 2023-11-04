@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_project/src/controller/all_product_provider.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_light.dart';
 
+
 class Description extends StatelessWidget {
   const Description({super.key});
 

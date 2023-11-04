@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/local_widget/button_text.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/local_widget/input_form.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/local_widget/other%20option.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/local_widget/other_option_text.dart';
-import 'package:internship_project/src/data/global_widget/sign_button.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/view/sign_up.dart';
-import 'package:internship_project/src/module/nav_bar/nav_bar.dart';
-
+import '../package.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({Key? key}) : super(key: key);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:internship_project/src/data/global_widget/custom_app_bar.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/cart_screen/local_widget/bucket_item_list.dart';
+import '../cart_package.dart';
+
 
 class Cart extends StatelessWidget {
   const Cart({super.key});
@@ -22,6 +21,7 @@ class Cart extends StatelessWidget {
                     children: const [
                       BucketItemList()
                     ])),
+            const CheckoutButton()
           ],
         ),
       )

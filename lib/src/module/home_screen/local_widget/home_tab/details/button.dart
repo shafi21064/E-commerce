@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/item_provider.dart';
-import 'package:internship_project/src/data/global_widget/cart_button.dart';
-import 'package:internship_project/src/data/global_widget/fill_custom_button.dart';
-import 'package:internship_project/src/data/global_widget/wish_icon.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/home_screen/local_widget/home_tab/details/custom_bottom_sheet.dart';
 import 'package:provider/provider.dart';
+import '../../../home_package.dart';
 
 class CustomButtonForBuy extends StatelessWidget {
   final int index;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
+import '../checkout_pakage.dart';
 
 class TitleCard extends StatelessWidget {
   final String cardTitle, cardButton;

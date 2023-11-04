@@ -1,7 +1,24 @@
-export '../cart_screen/local_widget/bucket_item.dart';
+export 'view/confirm_order.dart';
+export 'local_widget/checkout_item.dart';
+export 'local_widget/checkout_item_list.dart';
+export 'local_widget/confirm_message.dart';
+export 'local_widget/confi_background.dart';
+export 'local_widget/contact_number.dart';
 export 'local_widget/delivery_details.dart';
+export 'local_widget/edit_button.dart';
+export 'local_widget/edit_contact_number.dart';
+export 'local_widget/edit_name&address.dart';
+export 'local_widget/info_input_field.dart';
+export 'local_widget/name&address.dart';
 export 'local_widget/payment_details.dart';
+export 'local_widget/place_oder_button.dart';
 export 'local_widget/text_details_row.dart';
-export '../cart_screen/local_widget/bucket_item_list.dart';
+export 'local_widget/title_card.dart';
+export '../../data/global_widget/custom_app_bar.dart';
+export '../../data/global_widget/space_widget/space_in_height.dart';
+export '../../controller/item_provider.dart';
 export '../../data/utils/custom_color.dart';
-
+export '../../data/global_widget/text_widget/text_medium.dart';
+export '../../data/global_widget/text_widget/text_regular.dart';
+export '../../data/global_widget/custom_button.dart';
+export '../../data/global_widget/sign_button.dart';

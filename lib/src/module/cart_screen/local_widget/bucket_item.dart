@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/item_provider.dart';
-import 'package:internship_project/src/data/global_widget/cart_count.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_width.dart';
-import 'package:internship_project/src/data/global_widget/text_widget.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
 import 'package:provider/provider.dart';
+import '../cart_package.dart';
 
 
 class BucketItem extends StatelessWidget {
@@ -34,7 +27,7 @@ class BucketItem extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       height: 137.h,
       width: MediaQuery.sizeOf(context).width,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           color: Colors.white,
           //borderRadius: BorderRadius.circular(5.r)
       ),
@@ -53,13 +46,13 @@ class BucketItem extends StatelessWidget {
                 child: TextRegular(
                   text: itemName,
                   fontSize: 16.sp,
-                  color: Color(0xff7E7E7E))
+                  color: const Color(0xff7E7E7E))
               ),
               SpaceInHeight(height: 5.h),
               TextMedium(
                   text: itemPrice,
                   fontSize: 15.sp,
-                color: Color(0xffB2B2B2),
+                color: const Color(0xffB2B2B2),
               ),
               SpaceInHeight(height: 8.h),
               TextMedium(
@@ -77,7 +70,7 @@ class BucketItem extends StatelessWidget {
                 height: 24.h,
                 width: 24.w,
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xffDBDBDB)),
+                  border: Border.all(color: const Color(0xffDBDBDB)),
                   shape: BoxShape.circle
                 ),
               ),

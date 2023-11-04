@@ -1,8 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/banner_images.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
+import '../../../../controller/banner_images.dart';
+import '../../../../data/utils/custom_color.dart';
+
 
 class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_bold.dart';
-import 'package:internship_project/src/data/global_widget/text_widget/text_regular.dart';
+
+import '../account_package.dart';
+
 
 class PicturePart extends StatelessWidget {
   const PicturePart({super.key});
@@ -32,11 +33,11 @@ class PicturePart extends StatelessWidget {
             ),
             TextBold(
                 text: 'Jonathon Smith',
-                color: Color(0xff404040),
+                color: const Color(0xff404040),
                 fontSize: 16.sp
             ),
             TextRegular(text: '018373636733',
-                color: Color(0xff9F9F9F),
+                color: const Color(0xff9F9F9F),
                 fontSize: 16.sp)
           ],
         ),

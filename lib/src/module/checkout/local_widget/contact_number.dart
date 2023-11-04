@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/module/checkout/local_widget/edit_button.dart';
-import 'package:internship_project/src/module/checkout/local_widget/edit_contact_number.dart';
 
-import '../../../data/global_widget/text_widget/text_regular.dart';
+import '../checkout_pakage.dart';
 
 class ContactNumber extends StatelessWidget {
   const ContactNumber({super.key});
@@ -32,7 +30,7 @@ class ContactNumber extends StatelessWidget {
                       top: Radius.circular(17.r))),
               context: context,
               builder: (BuildContext context) {
-                return EditContactNumber();
+                return const EditContactNumber();
               },
             );
           })
