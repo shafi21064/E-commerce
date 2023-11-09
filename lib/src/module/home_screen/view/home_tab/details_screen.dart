@@ -5,7 +5,7 @@ import '../../home_package.dart';
 
 class DetailsScreen extends StatelessWidget {
 String productImage;
-final String productSpecialPrice, productPrice,productSubtitle;
+final String productSpecialPrice, productPrice,productSubtitle, description, specification;
 final int index;
 final dynamic onPress;
 final bool favorite;
@@ -17,7 +17,9 @@ final bool favorite;
       required this.productSubtitle,
       required this.index,
       required this.onPress,
-      required this.favorite
+      required this.favorite,
+      required this.specification,
+      required this.description
     });
 
   @override
@@ -45,7 +47,10 @@ final bool favorite;
                          SpaceInHeight(height: 24.h),
                          const VoucherPart(),
                          SpaceInHeight(height: 16.h),
-                         const TabBarViewInfo(),
+                         TabBarViewInfo(
+                           description: description,
+                           specification: specification,
+                         ),
                          SpaceInHeight(height: 17.h),
                          const RelatedProduct(),
                          SpaceInHeight(height: 39.h),

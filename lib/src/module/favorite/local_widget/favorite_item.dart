@@ -39,17 +39,20 @@ class FavoriteItem extends StatelessWidget {
               right: 0,
               child: ClipPath(
                 clipper: Customshape(),
-                child: Container(
-                  padding: EdgeInsets.only(top: 9.3.h, right: 9.3.w),
-                  height: 59.48.h,
-                  width: 75.69.w,
-                  color: Colors.red,
-                  child: Align(
-                    alignment: Alignment.topRight,
-                    child: SizedBox(
-                      height: 20.35.h,
-                        width: 16.53.w,
-                        child: Image.asset('assets/icons/delete.png')),
+                child: InkWell(
+                  onTap: onpress,
+                  child: Container(
+                    padding: EdgeInsets.only(top: 9.3.h, right: 9.3.w),
+                    height: 59.48.h,
+                    width: 75.69.w,
+                    color: Colors.red,
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: SizedBox(
+                        height: 20.35.h,
+                          width: 16.53.w,
+                          child: Image.asset('assets/icons/delete.png', color: Colors.white,)),
+                    ),
                   ),
                 ),
               )
@@ -82,7 +85,7 @@ class FavoriteItem extends StatelessWidget {
                           child: TextRegular(
                               text: itemName,
                               fontSize: 16.sp,
-                              color: Color(0xff7E7E7E)),
+                              color: const Color(0xff7E7E7E)),
                         ),
                         SizedBox(
                           height: 10.h,

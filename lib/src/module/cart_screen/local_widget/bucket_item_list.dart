@@ -24,11 +24,16 @@ class BucketItemList extends StatelessWidget {
               addTap: (){
               itemProvider.addItem(index);
               },
+            onCheckoutTap: (){
+              itemProvider.setIsCheckout(index);
+            },
               counterText: itemProvider.itemList[index]['cart_count'].toString(),
               itemName: itemProvider.itemList[index]['name'],
               itemPic: itemProvider.cartList[index]['image']['little_size'],
               itemPrice: itemProvider.cartList[index]['price'].toString(),
               specialPrice: itemProvider.cartList[index]['special_price'].toString(),
+            inCheckout: itemProvider.cartList[index]['in_checkout'],
+
           );
           }
       ),

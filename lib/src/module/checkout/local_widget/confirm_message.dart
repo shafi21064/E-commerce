@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/module/log_in&sign_uo/package.dart';
 import '../checkout_pakage.dart';
 
 class ConfirmMessage extends StatelessWidget {
@@ -25,7 +26,10 @@ class ConfirmMessage extends StatelessWidget {
               style: TextStyle(fontSize: 12.sp, color: Colors.black),
             ),
             SpaceInHeight(height: 20.h),
-            CustomBigButton(onTap: (){},
+            CustomBigButton(onTap: (){
+              Navigator.pushAndRemoveUntil(
+                  context, MaterialPageRoute(builder: (context)=> NavBar()), (route) => false);
+            },
                 buttonName: 'Continue Shopping')
           ],
         ),

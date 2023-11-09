@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/checkbox_controller.dart';
+import 'package:internship_project/src/controller/category_item.dart';
 import 'package:internship_project/src/controller/item_provider.dart';
-import 'package:internship_project/src/module/log_in&sign_uo/view/log_in.dart';
 import 'package:internship_project/src/module/spalsh_screen/view/splash_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -24,6 +23,7 @@ class MyApp extends StatelessWidget {
         return MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (_) => ItemProvider()),
+            ChangeNotifierProvider(create: (_) => CategoryItem()),
           ],
           child: const MaterialApp(
             debugShowCheckedModeBanner: false,

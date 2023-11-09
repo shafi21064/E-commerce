@@ -32,16 +32,18 @@ class _BestSalesProductState extends State<BestSalesProduct> {
             onCartTap: (){
                 itemProvider.setAddToCart(index);
                 if(itemProvider.itemList[index]['in_cart'] == true){
-                  final snackBar = SnackBar(
+                  const snackBar = SnackBar(
+                    duration: Duration(seconds: 1),
                       backgroundColor: CustomColor.primaryColor,
-                      content: const Text('Added to Cart')
+                      content: Text('Added to Cart')
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
                 else{
-                  final snackBar = SnackBar(
+                  const snackBar = SnackBar(
+                      duration: Duration(seconds: 1),
                       backgroundColor: CustomColor.primaryColor,
-                      content: const Text('Remove from Cart')
+                      content: Text('Remove from Cart')
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
@@ -55,15 +57,15 @@ class _BestSalesProductState extends State<BestSalesProduct> {
                     setState(() {
                       itemProvider.setIsFavorite(index);
                       if(itemProvider.itemList[index]['is_favorite'] == true){
-                        final snackBar = SnackBar(
+                        const snackBar = SnackBar(
                             backgroundColor: CustomColor.primaryColor,
-                            content: const Text('Added to Wishlist')
+                            content: Text('Added to Wishlist')
                         );
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       }else{
-                        final snackBar = SnackBar(
+                        const snackBar = SnackBar(
                             backgroundColor: CustomColor.primaryColor,
-                            content: const Text('Remove from Wishlist')
+                            content: Text('Remove from Wishlist')
                         );
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       }
@@ -75,6 +77,8 @@ class _BestSalesProductState extends State<BestSalesProduct> {
                   productSpecialPrice: itemProvider.itemList[index]['special_price'].toString(),
                   index: index,
                   favorite: itemProvider.itemList[index]['is_favorite'],
+                  description: itemProvider.itemList[index]['details'],
+                  specification: itemProvider.itemList[index]['specification'],
                 ),
                 withNavBar: false, // OPTIONAL VALUE. True by default.
                 pageTransitionAnimation: PageTransitionAnimation.cupertino,

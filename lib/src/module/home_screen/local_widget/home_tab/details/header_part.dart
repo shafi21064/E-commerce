@@ -18,7 +18,7 @@ class HeaderPart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 18.w),
-      height: 156.h,
+      height: 160.h,
       //color: Colors.red,
       child: Column(
         children: [

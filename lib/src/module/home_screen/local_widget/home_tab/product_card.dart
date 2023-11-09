@@ -22,7 +22,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 0.h ),
-      height: 235.h,
+      height: 234.h,
       width: 182.w,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -36,7 +36,7 @@ class ProductCard extends StatelessWidget {
         ]
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(10.w, 0.h, 10.w, 0.h),
+        padding: EdgeInsets.fromLTRB(11.w, 15.h, 13.w, 0.h),
         child: Column(
           children: [
             InkWell(
@@ -44,18 +44,26 @@ class ProductCard extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 120.h,
+                    height: 100.h,
                       width: 100.w,
-                      child: Image.asset(productImage,)),
-                  TextRegular(
-                      text: productName,
-                      color: CustomColor.cardTextColor,
-                      fontSize: 12.sp
+                      child: Image.asset(productImage, fit: BoxFit.fill,)),
+                  SpaceInHeight(height: 10.h),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: SizedBox(
+                      height: 33.h,
+                      width: 128.w,
+                      child: TextRegular(
+                          text: productName,
+                          color: CustomColor.cardTextColor,
+                          fontSize: 12.sp
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-            SpaceInHeight(height: 12.h),
+            SpaceInHeight(height: 08.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

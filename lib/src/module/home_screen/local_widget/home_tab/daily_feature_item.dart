@@ -55,15 +55,15 @@ class DailyFeatureItem extends StatelessWidget {
                   ),
                 ),
                 const DailyFeature(
-                    imgPath: 'assets/images/mouse.png',
+                    imgPath: 'assets/images/gaming_mouse.jpg',
                     cardName: '550.00 SAR'
                 ),
                 const DailyFeature(
-                    imgPath: 'assets/images/gaming-pc.png',
+                    imgPath: 'assets/images/gaming_pc.png',
                     cardName: '550.00 SAR'
                 ),
                 const DailyFeature(
-                    imgPath: 'assets/images/headphones.png',
+                    imgPath: 'assets/images/headphone_2.jpg',
                     cardName: '550.00 SAR'
                 ),
               ],

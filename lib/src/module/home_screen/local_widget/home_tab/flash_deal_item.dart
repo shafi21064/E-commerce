@@ -48,27 +48,27 @@ class FlashDealItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 FlashDeals(
-                  imagePath: 'assets/images/Gaming-Chair.png',
+                  imagePath: 'assets/images/chair.jpg',
                   priceTagColor: CustomColor.primaryColor,
                   productPrice: '550.00 SAR',
                   fontSize: 11.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/mouse.png',
+                  imagePath: 'assets/images/gaming_pc.png',
                   priceTagColor: Color(0xff68C037),
-                  productPrice: '230.00',
+                  productPrice: '230.00 SAR',
                   fontSize: 11.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/gaming-pc.png',
+                  imagePath: 'assets/images/gaming_pc.png',
                   priceTagColor: Color(0xff094D82),
-                  productPrice: '1230.00',
+                  productPrice: '1230.00 SAR',
                   fontSize: 11.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/headphones.png',
+                  imagePath: 'assets/images/headphone_2.jpg',
                   priceTagColor: Color(0xff2B2B2B),
-                  productPrice: '560.00',
+                  productPrice: '560.00 SAR',
                   fontSize: 11.sp,
                 )
               ],

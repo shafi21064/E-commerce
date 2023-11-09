@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../cart_package.dart';
 
 
@@ -21,7 +22,8 @@ class Cart extends StatelessWidget {
                     children: const [
                       BucketItemList()
                     ])),
-            const CheckoutButton()
+            CheckoutButton(),
+            SpaceInHeight(height: 10.h)
           ],
         ),
       )

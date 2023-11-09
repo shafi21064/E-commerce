@@ -2,64 +2,17 @@ import 'package:flutter/cupertino.dart';
 
 class ItemProvider extends ChangeNotifier {
   dynamic itemList = [
-    // {
-    //   'id': 1,
-    //   'item_pic': 'assets/images/dish_one.png',
-    //   'item_name': 'Dish Name',
-    //   'item_subname': 'Dish Subtitle',
-    //   'special_price': '120',
-    //   'regular_price': '180',
-    //   'item_left': '5',
-    //   'is_favorite': false,
-    //   'in_cart': false,
-    //   'cart_count' : 1
-    // },
-    // {
-    //   'id': 2,
-    //   'item_pic': 'assets/images/dish_two.png',
-    //   'item_name': 'Dish Name2',
-    //   'item_subname': 'Dish Subtitle',
-    //   'special_price': '140',
-    //   'regular_price': '190',
-    //   'item_left': '5',
-    //   'is_favorite': false,
-    //   'in_cart': false,
-    //   'cart_count' : 1
-    // },
-    // {
-    //   'id': 3,
-    //   'item_pic': 'assets/images/dish_one.png',
-    //   'item_name': 'Dish Name3',
-    //   'item_subname': 'Dish Subtitle',
-    //   'special_price': '120',
-    //   'regular_price': '180',
-    //   'item_left': '5',
-    //   'is_favorite': false,
-    //   'in_cart': false,
-    //   'cart_count' : 1
-    // },
-    // {
-    //   'id': 4,
-    //   'item_pic': 'assets/images/dish_two.png',
-    //   'item_name': 'Dish Name4',
-    //   'item_subname': 'Dish Subtitle',
-    //   'special_price': '120',
-    //   'regular_price': '180',
-    //   'item_left': '5',
-    //   'is_favorite': false,
-    //   'in_cart': false,
-    //   'cart_count' : 1
-    // }
-
     {
       'id' : 1,
       'name' : 'Power Bank Water Gold Sound Box',
       'sub_title' : "Strategies de Survie des Populations Africaines dans une Economie Mondialisée - L’expérience Camerounaise.",
       'image' : {
-        'little_size' : 'assets/images/headphones.png',
-        'big_size' : 'assets/images/headphones_PNG101924.png'
+        'little_size' : 'assets/images/headphone_2.jpg',
+        'big_size' : 'assets/images/headphone_2.jpg'
       },
       'price' : '46,0000.00 XAF',
+      'category' : 'Electronics Device',
+      'subcategory' : 'Gaming Device',
       'special_price' : 550.00,
       'details' : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       'specification' : "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,",
@@ -73,9 +26,11 @@ class ItemProvider extends ChangeNotifier {
       'name' : 'Power Bank Water Gold Sound Box',
       'sub_title' : "Strategies de Survie des Populations Africaines dans une Economie Mondialisée - L’expérience Camerounaise.",
       'image' : {
-        'little_size' : 'assets/images/headphones.png',
-        'big_size' : 'assets/images/headphones_PNG101924.png'
+        'little_size' : 'assets/images/chair.jpg',
+        'big_size' : 'assets/images/chair.jpg'
       },
+      'category' : 'Electronics Device',
+      'subcategory' : 'Gaming Device',
       'price' : '46,0000.00 XAF',
       'special_price' : 550.00,
       'details' : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -90,9 +45,11 @@ class ItemProvider extends ChangeNotifier {
       'name' : 'Power Bank Water Gold Sound Box',
       'sub_title' : "Strategies de Survie des Populations Africaines dans une Economie Mondialisée - L’expérience Camerounaise.",
       'image' : {
-        'little_size' : 'assets/images/headphones.png',
-        'big_size' : 'assets/images/headphones_PNG101924.png'
+        'little_size' : 'assets/images/gaming_pc.png',
+        'big_size' : 'assets/images/gaming_pc.png'
       },
+      'category' : 'Electronics Device',
+      'subcategory' : 'Gaming Device',
       'price' : '46,0000.00 XAF',
       'special_price' : 550.00,
       'details' : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -107,9 +64,11 @@ class ItemProvider extends ChangeNotifier {
       'name' : 'Power Bank Water Gold Sound Box',
       'sub_title' : "Strategies de Survie des Populations Africaines dans une Economie Mondialisée - L’expérience Camerounaise.",
       'image' : {
-        'little_size' : 'assets/images/headphones.png',
-        'big_size' : 'assets/images/headphones_PNG101924.png'
+        'little_size' : 'assets/images/gaming_mouse.jpg',
+        'big_size' : 'assets/images/gaming_mouse.jpg'
       },
+      'category' : 'Electronics Device',
+      'subcategory' : 'Gaming Device',
       'price' : '46,0000.00 XAF',
       'special_price' : 550.00,
       'details' : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -121,6 +80,21 @@ class ItemProvider extends ChangeNotifier {
     },
   ];
 
+
+
+  ///////////////////////////==Filtered by category==////////////////////////
+
+  // List<dynamic> filteredProductsByCategory(String category) {
+  //   return itemList.where((product) => product['category'] == category).toList();
+  // }
+
+
+  //
+  // List<dynamic> filteredProductsByCategory(String category, String subcategory) {
+  //   return itemList.where((product) =>
+  //   product['category'] == category && product['subcategory'] == subcategory
+  //   ).toList();
+  // }
 
   ////////////////////////// ==only for wishlist== /////////////////////////
   List _wishlist = [];
@@ -217,32 +191,50 @@ class ItemProvider extends ChangeNotifier {
     if (item['in_checkout']) {
       _checkout.add(item);
     }
-    // else {
-    //   _checkout.remove(item);
-    // }
+    else {
+      _checkout.remove(item);
+    }
     print(_checkout.length);
     print(checkout);
     notifyListeners();
   }
 
   void removeFromCheckout(item) {
-    itemList.asMap().forEach((ind, value) => {
+    _cartList.asMap().forEach((ind, value) => {
       if (item["id"] == value["id"])
-        {_checkout.remove(item), itemList[ind]['in_checkout'] = false}
+        {_checkout.remove(item), _cartList[ind]['in_checkout'] = false}
     });
     notifyListeners();
   }
 
 
   void setIsCheckout(index) {
-    if (itemList[index]['in_checkout']) {
-      itemList[index]['in_checkout'] = false;
-      checkoutItem(itemList[index]);
+    if (_cartList[index]['in_checkout']) {
+      _cartList[index]['in_checkout'] = false;
+      checkoutItem(_cartList[index]);
     } else {
-      itemList[index]['in_checkout'] = true;
-      checkoutItem(itemList[index]);
+      _cartList[index]['in_checkout'] = true;
+      checkoutItem(_cartList[index]);
     }
     notifyListeners();
   }
+
+  void allInCheckout(index){
+    _cartList[index]['in_checkout'] = true;
+    checkoutItem(_cartList[index]);
+  }
+
+  /////////////////////////////===get total of checkout===////////////////////////
+  double getTotalPrice() {
+    return _checkout.map((item) =>
+    item['special_price'] * item['cart_count']).fold(0.0, (a, b) => a + b);
+  }
+
+  double totalWithAll(){
+    return getTotalPrice() + 1000 ;
+  }
+
 }
+
+
 

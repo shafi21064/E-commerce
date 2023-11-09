@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:provider/provider.dart';
+import 'package:internship_project/src/data/global_widget/space_widget/space_in_width.dart';
 import '../cart_package.dart';
 
 
 class BucketItem extends StatelessWidget {
   String itemName, itemPrice,itemPic, counterText, specialPrice;
-  dynamic onDelete,minimizeTap, addTap;
+  dynamic onDelete,minimizeTap, addTap, onCheckoutTap;
+  final bool inCheckout;
     BucketItem({
       super.key,
       required this.itemName,
@@ -16,12 +17,13 @@ class BucketItem extends StatelessWidget {
       required this.minimizeTap,
       required this.addTap,
       required this.counterText,
-      required this.specialPrice
+      required this.specialPrice,
+      required this.inCheckout,
+      required this.onCheckoutTap
     });
 
   @override
   Widget build(BuildContext context) {
-    var itemProvider = Provider.of<ItemProvider>(context);
     return Container(
       margin: EdgeInsets.only(bottom: 7.h),
       padding: const EdgeInsets.all(16),
@@ -37,6 +39,7 @@ class BucketItem extends StatelessWidget {
             height: 100.h,
               width: 100.w,
               child: Image.asset(itemPic)),
+          SpaceInWidth(width: 10.w),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -66,12 +69,17 @@ class BucketItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Container(
-                height: 24.h,
-                width: 24.w,
-                decoration: BoxDecoration(
-                  border: Border.all(color: const Color(0xffDBDBDB)),
-                  shape: BoxShape.circle
+              InkWell(
+                onTap: onCheckoutTap,
+                child: Container(
+                  height: 24.h,
+                  width: 24.w,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: const Color(0xffDBDBDB)),
+                    shape: BoxShape.circle,
+                    color: inCheckout? CustomColor.primaryColor : Colors.white
+                  ),
+                  child: inCheckout? Icon(Icons.done, size: 10, color: Colors.white,) : null
                 ),
               ),
               CartCount(

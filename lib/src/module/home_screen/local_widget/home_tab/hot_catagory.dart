@@ -28,25 +28,25 @@ class HotCategory extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 FlashDeals(
-                  imagePath: 'assets/images/Gaming-Chair.png',
+                  imagePath: 'assets/images/chair.jpg',
                   priceTagColor: CustomColor.primaryColor,
                   productPrice: 'G11 Chair',
                   fontSize: 8.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/mouse.png',
+                  imagePath: 'assets/images/gaming_mouse.jpg',
                   priceTagColor: Color(0xff68C037),
                   productPrice: 'G11 Mouse',
                   fontSize: 8.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/gaming-pc.png',
+                  imagePath: 'assets/images/gaming_pc.png',
                   priceTagColor: Color(0xff094D82),
                   productPrice: 'Gaming PC',
                   fontSize: 8.sp,
                 ),
                 FlashDeals(
-                  imagePath: 'assets/images/headphones.png',
+                  imagePath: 'assets/images/headphone_2.jpg',
                   priceTagColor: Color(0xff2B2B2B),
                   productPrice: 'G11 Headphone',
                   fontSize: 8.sp,

@@ -5,12 +5,12 @@ import '../checkout_pakage.dart';
 
 
 class CheckOut extends StatelessWidget {
-  final int index;
-  const CheckOut({super.key, required this.index});
+  final int? index;
+  const CheckOut({super.key, this.index});
 
   @override
   Widget build(BuildContext context) {
-    var itemProvider = Provider.of<ItemProvider>(context);
+    // var itemProvider = Provider.of<ItemProvider>(context);
     return Scaffold(
       backgroundColor: CustomColor.backgroundColor,
       body: SafeArea(

@@ -10,7 +10,7 @@ class CardPartItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(18.w, 19.h, 18.w, 12.h),
-      height: 130.h,
+      height: 131.h,
       width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
         color: Colors.white,

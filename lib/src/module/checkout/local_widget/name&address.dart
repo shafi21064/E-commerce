@@ -28,6 +28,7 @@ class NameAndAddress extends StatelessWidget {
             onTap: (){
               showModalBottomSheet<void>(
                 showDragHandle: true,
+                isScrollControlled: true,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.vertical(
                         top: Radius.circular(17.r))),

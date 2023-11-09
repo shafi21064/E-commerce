@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import '../checkout_pakage.dart';
 
 class PlaceOrderButton extends StatelessWidget {
@@ -7,6 +8,7 @@ class PlaceOrderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final itemProvider = Provider.of<ItemProvider>(context);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 37.w, vertical: 12.h),
       height: 106.h,
@@ -18,7 +20,7 @@ class PlaceOrderButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextMedium(
-                  text: 'Item: 2',
+                  text: 'Item: ${itemProvider.checkout.length}',
                   fontSize: 14.sp,
                 color: const Color(0xff5A5A5A),
               ),
@@ -27,13 +29,13 @@ class PlaceOrderButton extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: 'RobotoBold',
                   fontSize: 14.sp,
-                  color: Color(0xff343434),
+                  color: const Color(0xff343434),
                 ),
                 children: [
                   TextSpan(
-                    text: 'SAR 50000.00',
+                    text: 'SAR ${itemProvider.totalWithAll()}',
                     style: TextStyle(
-                      color: Color(0xff5A5A5A),
+                      color: const Color(0xff5A5A5A),
                       fontFamily: 'RobotoMedium',
                       fontSize: 14.sp
                     )
@@ -45,7 +47,7 @@ class PlaceOrderButton extends StatelessWidget {
           SpaceInHeight(height: 16.h),
           InkWell(
             onTap: ()=>Navigator.push(
-                context, MaterialPageRoute(builder: (context)=> ConfirmOrder())),
+                context, MaterialPageRoute(builder: (context)=> const ConfirmOrder())),
             child: Container(
               alignment: Alignment.center,
               height: 49.h,

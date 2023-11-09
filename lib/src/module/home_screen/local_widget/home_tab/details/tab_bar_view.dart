@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../home_package.dart';
 
 class TabBarViewInfo extends StatefulWidget {
-   const TabBarViewInfo({super.key});
+  final String description, specification;
+
+   const TabBarViewInfo({super.key, required this.description, required this.specification});
 
   @override
   State<TabBarViewInfo> createState() => _TabBarViewInfoState();
@@ -55,9 +57,13 @@ class _TabBarViewInfoState extends State<TabBarViewInfo> with TickerProviderStat
             // ),
             child: TabBarView(
               controller: _tabController,
-              children: const [
-                Description(),
-                Specification()
+              children: [
+                Description(
+                  productDescription: widget.description,
+                ),
+                Specification(
+                  productSpecification: widget.specification,
+                )
               ],
             ),
           )

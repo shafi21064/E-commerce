@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/account_screen/local_widget/address.dart';
 import 'package:internship_project/src/module/account_screen/local_widget/details_card.dart';
+import 'package:internship_project/src/module/account_screen/local_widget/edit_profile.dart';
+import 'package:internship_project/src/module/account_screen/view/order_details.dart';
+import 'package:internship_project/src/module/checkout/view/checkout.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+
+import '../../checkout/checkout_pakage.dart';
 
 class DetailsPart extends StatelessWidget {
   const DetailsPart({super.key});
@@ -17,27 +24,60 @@ class DetailsPart extends StatelessWidget {
       child: Column(
         children: [
           DetailsCard(
+            onTap: (){
+              pushNewScreen(
+                context,
+                screen: const OrderDetails(),
+                withNavBar: false, // OPTIONAL VALUE. True by default.
+                pageTransitionAnimation: PageTransitionAnimation.cupertino,
+              );
+            },
             imagePath: 'assets/icons/home_icon.png',
               cardText: 'Order Details',
               textColor: CustomColor.primaryColor
           ),
           SpaceInHeight(height: 25.h),
-          const DetailsCard(
+          DetailsCard(
+              onTap: (){
+                  showModalBottomSheet<void>(
+                    showDragHandle: true,
+                    isScrollControlled: true,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(17.r))),
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const EditProfile();
+                    },
+                  );
+                },
+
             imagePath: 'assets/icons/profile.png',
               cardText: 'Edit Profile',
-              textColor: Color(0xff404040)
           ),
           SpaceInHeight(height: 25.h),
-          const DetailsCard(
+          DetailsCard(
+              onTap: (){
+                showModalBottomSheet<void>(
+                  showDragHandle: true,
+                  isScrollControlled: true,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(17.r))),
+                  context: context,
+                  builder: (BuildContext context) {
+                    return const Address();
+                  },
+                );
+              },
             imagePath: 'assets/icons/address.png',
               cardText: 'Address',
-              textColor: Color(0xff404040)
           ),
           SpaceInHeight(height: 25.h),
-          const DetailsCard(
+          DetailsCard(
+              onTap: (){},
             imagePath: 'assets/icons/translate.png',
               cardText: 'Change Language',
-              textColor:  Color(0xff404040)
           )
         ],
       ),

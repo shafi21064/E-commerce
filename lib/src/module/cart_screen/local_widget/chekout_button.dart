@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:internship_project/src/controller/item_provider.dart';
 import 'package:internship_project/src/data/global_widget/fill_custom_button.dart';
 import 'package:internship_project/src/data/global_widget/space_widget/space_in_width.dart';
 import 'package:internship_project/src/data/global_widget/text_widget/text_medium.dart';
 import 'package:internship_project/src/data/utils/custom_color.dart';
+import 'package:internship_project/src/module/home_screen/home_package.dart';
+import 'package:provider/provider.dart';
 
-class CheckoutButton extends StatelessWidget {
-  const CheckoutButton({super.key});
+class CheckoutButton extends StatefulWidget {
+   CheckoutButton({super.key,});
+
+  @override
+  State<CheckoutButton> createState() => _CheckoutButtonState();
+}
+
+class _CheckoutButtonState extends State<CheckoutButton> {
+   bool allSelected = false;
 
   @override
   Widget build(BuildContext context) {
+    final itemProvider = Provider.of<ItemProvider>(context);
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 28.w),
       alignment: Alignment.center,
@@ -17,23 +28,37 @@ class CheckoutButton extends StatelessWidget {
       width: 416.w,
       color: Colors.white,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            height: 16.h,
-            width: 16.w,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: CustomColor.primaryColor
+          SizedBox(
+            child: Row(
+              children: [
+                InkWell(
+                  onTap: (){
+                    setState(() {
+                      allSelected = !allSelected;
+                    });
+                  },
+                  child: Container(
+                    height: 20.h,
+                    width: 20.w,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Color(0xffDBDBDB)),
+                      shape: BoxShape.circle,
+                      color: allSelected? CustomColor.primaryColor : Colors.white
+                    ),
+                    child: allSelected? const Icon(Icons.done_sharp, size: 10, color: Colors.white,) : null
+                  ),
+                ),
+                SpaceInWidth(width: 6.w),
+                TextMedium(
+                    text: 'All',
+                    fontSize: 14.sp,
+                  color: const Color(0xff5A5A5A),
+                ),
+              ],
             ),
-            child: const Icon(Icons.done_sharp, size: 10, color: Colors.white,),
           ),
-          SpaceInWidth(width: 6.w),
-          TextMedium(
-              text: 'All',
-              fontSize: 14.sp,
-            color: const Color(0xff5A5A5A),
-          ),
-          SpaceInWidth(width: 29.w),
           RichText(text: TextSpan(
             text: 'Total: ',
             style: TextStyle(
@@ -43,7 +68,7 @@ class CheckoutButton extends StatelessWidget {
             ),
             children:[
               TextSpan(
-                text: 'SAR 2000.00',
+                text: 'SAR ${itemProvider.getTotalPrice().toStringAsFixed(2)}',
                 style: TextStyle(
                   color: CustomColor.primaryColor,
                   fontSize: 14.sp,
@@ -52,19 +77,21 @@ class CheckoutButton extends StatelessWidget {
               )
             ]
           )),
-          SpaceInWidth(width: 37.w),
-          Container(
-            alignment: Alignment.center,
-            height: 37.h,
-            width: 132.w,
-            decoration: BoxDecoration(
-              color: CustomColor.primaryColor,
-              borderRadius: BorderRadius.circular(5.r)
-            ),
-            child: TextMedium(
-              text: 'Check Out',
-              fontSize: 14.sp,
-              color: Colors.white,
+          InkWell(
+            onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> const CheckOut())),
+            child: Container(
+              alignment: Alignment.center,
+              height: 37.h,
+              width: 132.w,
+              decoration: BoxDecoration(
+                color: CustomColor.primaryColor,
+                borderRadius: BorderRadius.circular(5.r)
+              ),
+              child: TextMedium(
+                text: 'Check Out',
+                fontSize: 14.sp,
+                color: Colors.white,
+              ),
             ),
           )
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:provider/provider.dart';
 import '../checkout_pakage.dart';
 
 class PaymentDetails extends StatelessWidget {
@@ -7,6 +8,7 @@ class PaymentDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final itemProvider = Provider.of<ItemProvider>(context);
     return Container(
       margin: EdgeInsets.symmetric(horizontal: 10.w),
       padding: EdgeInsets.fromLTRB(11.w, 18.h, 10.w, 13.h),
@@ -21,7 +23,7 @@ class PaymentDetails extends StatelessWidget {
         children: [
           TextDetailsRow(
             pricingPurpose: 'Subtotal',
-            price: 'SAR 450000.00',
+            price: 'SAR ${itemProvider.getTotalPrice()}',
             color: const Color(0xff7E7E7E),
           ),
           SpaceInHeight(height: 14.h),
@@ -46,7 +48,7 @@ class PaymentDetails extends StatelessWidget {
                 color: const Color(0xff4D4D4D),
               ),
               TextMedium(
-                text: 'SAR 500000.00',
+                text: 'SAR ${itemProvider.totalWithAll()}',
                 fontSize: 15.sp,
                 color: const Color(0xff4D4D4D),
               ),

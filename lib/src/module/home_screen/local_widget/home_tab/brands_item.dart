@@ -37,19 +37,19 @@ class BrandsItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Brands(
-                  imagePath: 'assets/images/Gaming-Chair.png',
+                  imagePath: 'assets/images/chair.jpg',
                   bradImage: 'assets/icons/diseal.png',
                 ),
                 Brands(
-                  imagePath: 'assets/images/mouse.png',
+                  imagePath: 'assets/images/gaming_mouse.jpg',
                   bradImage: 'assets/icons/guine.png',
                 ),
                 Brands(
-                  imagePath: 'assets/images/gaming-pc.png',
+                  imagePath: 'assets/images/gaming_pc.png',
                   bradImage: 'assets/icons/fed-x.png',
                 ),
                 Brands(
-                  imagePath: 'assets/images/headphones.png',
+                  imagePath: 'assets/images/headphone_2.jpg',
                   bradImage: 'assets/icons/micromax.png',
                 )
               ],
