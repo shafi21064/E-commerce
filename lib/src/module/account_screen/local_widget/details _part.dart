@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_height.dart';
-import 'package:internship_project/src/data/utils/custom_color.dart';
-import 'package:internship_project/src/module/account_screen/local_widget/address.dart';
-import 'package:internship_project/src/module/account_screen/local_widget/details_card.dart';
-import 'package:internship_project/src/module/account_screen/local_widget/edit_profile.dart';
-import 'package:internship_project/src/module/account_screen/view/order_details.dart';
-import 'package:internship_project/src/module/checkout/view/checkout.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import '../account_package.dart';
 
-import '../../checkout/checkout_pakage.dart';
 
 class DetailsPart extends StatelessWidget {
   const DetailsPart({super.key});

@@ -17,7 +17,7 @@ class CustomButtonForBuy extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var itemProvider = Provider.of<ItemProvider>(context);
-    return Container(
+    return SizedBox(
       height: 67.h,
       width: MediaQuery.sizeOf(context).width,
       //color: Colors.red,

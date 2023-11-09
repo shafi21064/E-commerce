@@ -23,7 +23,7 @@ class SkipScreenWidget extends StatelessWidget {
       children: [
         SizedBox(
           height: 486.h,
-          width: 414.w,
+          width: MediaQuery.sizeOf(context).width,
           child: Image.asset(titleImage, fit: BoxFit.cover,),
         ),
         const SpaceInHeight(height: 105),

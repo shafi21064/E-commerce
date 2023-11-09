@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../data/utils/custom_color.dart';
 import '../account_package.dart';
 
 class DetailsCard extends StatelessWidget {

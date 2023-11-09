@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../home_package.dart';
 
 
@@ -21,7 +20,7 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 5.w, vertical: 0.h ),
+      margin: EdgeInsets.symmetric(horizontal: 5.w, ),
       height: 234.h,
       width: 182.w,
       decoration: BoxDecoration(
@@ -36,7 +35,7 @@ class ProductCard extends StatelessWidget {
         ]
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(11.w, 15.h, 13.w, 0.h),
+        padding: EdgeInsets.fromLTRB(11.w, 10.h, 11.w, 0.h),
         child: Column(
           children: [
             InkWell(
@@ -47,7 +46,7 @@ class ProductCard extends StatelessWidget {
                     height: 100.h,
                       width: 100.w,
                       child: Image.asset(productImage, fit: BoxFit.fill,)),
-                  SpaceInHeight(height: 10.h),
+                  SpaceInHeight(height: 7.h),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: SizedBox(
@@ -63,25 +62,33 @@ class ProductCard extends StatelessWidget {
                 ],
               ),
             ),
-            SpaceInHeight(height: 08.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                TextMedium(
-                    text: '$productPrice SAR',
-                    fontSize: 12.sp,
-                  color: CustomColor.primaryColor,
-                ),
-                SizedBox(
-                  height: 26.h,
-                    width: 26.w,
-                    child: InkWell(
-                      onTap: onCartTap,
-                        child: addToCart?
-                        CartIcon(color: CustomColor.primaryColor, iconColor: Colors.white,) :
-                        const CartIcon(color: Color(0xffF4F4F4), iconColor: Color(0xff3B3B3B),)
-                    ))
-              ],
+            //SpaceInHeight(height: 6.h),
+            SizedBox(
+              height: 26.h,
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    height: 16.h,
+                    width: 60.w,
+                    child: TextMedium(
+                        text: '$productPrice SAR',
+                        fontSize: 12.sp,
+                      color: CustomColor.primaryColor,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 26.h,
+                      width: 26.w,
+                      child: InkWell(
+                        onTap: onCartTap,
+                          child: addToCart?
+                          const CartIcon(color: CustomColor.primaryColor, iconColor: Colors.white,) :
+                          const CartIcon(color: Color(0xffF4F4F4), iconColor: Color(0xff3B3B3B),)
+                      ))
+                ],
+              ),
             )
           ],
         ),

@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/data/global_widget/space_widget/space_in_width.dart';
-import '../../../data/global_widget/space_widget/space_in_height.dart';
-import '../../../data/global_widget/text_widget/text_regular.dart';
-import '../../../data/utils/custom_color.dart';
+import '../account_package.dart';
 
 class IndicatorSign extends StatelessWidget {
   final String status;

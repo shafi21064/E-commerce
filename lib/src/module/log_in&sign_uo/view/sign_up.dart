@@ -13,6 +13,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool? isChecked = false;
   @override
   Widget build(BuildContext context) {
+    bool? isCheck = false;
     return Scaffold(
       appBar: AppBar(
         title: TextMedium(
@@ -38,38 +39,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SpaceInHeight(height: 54.8.h),
                 const InputForm(
                   hintText: 'First Name',
-                  //prefixIcon: Image.asset('assets/icons/telephone.png'),
                 ),
                 SpaceInHeight(height: 13.h),
                 const InputForm(
                   hintText: 'Email',
-                  //prefixIcon: Image.asset('assets/icons/lock.png'),
-                  //suffixIcon: Image.asset('assets/icons/eye.png'),
                 ),
                 SpaceInHeight(height: 13.h),
                 const InputForm(
                   hintText: 'Password',
-                  //prefixIcon: Image.asset('assets/icons/lock.png'),
-                  //: Image.asset('assets/icons/eye.png'),
                 ),
                 SpaceInHeight(height: 13.h),
                 const InputForm(
                   hintText: 'Phone Number',
-                  //prefixIcon: Image.asset('assets/icons/lock.png'),
-                  //suffixIcon: Image.asset('assets/icons/eye.png'),
                 ),
                 SpaceInHeight(height: 9.h),
                 Row(
                   children: [
                     Checkbox(
-                      activeColor: CustomColor.primaryColor,
-                      value: isChecked,
-                      tristate: false,
-                      onChanged: (newValue){
-                        isChecked = newValue;
-                        print(newValue);
-                      },
-                    ),
+                        checkColor: CustomColor.primaryColor,
+                        value: isCheck,
+                        onChanged: (newValue) {
+                          setState(() {
+                            isCheck = newValue;
+                          });
+                        }),
                     TermsAndPolicy()
                   ],
                 ),

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_project/src/controller/category_item.dart';
-import 'package:internship_project/src/module/category_screen/local_widget/catagories_card.dart';
 import 'package:provider/provider.dart';
+import '../category_package.dart';
 
 class CategoriesList extends StatefulWidget {
   const CategoriesList({super.key,});

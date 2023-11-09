@@ -79,7 +79,7 @@ class BucketItem extends StatelessWidget {
                     shape: BoxShape.circle,
                     color: inCheckout? CustomColor.primaryColor : Colors.white
                   ),
-                  child: inCheckout? Icon(Icons.done, size: 10, color: Colors.white,) : null
+                  child: inCheckout? const Icon(Icons.done, size: 10, color: Colors.white,) : null
                 ),
               ),
               CartCount(

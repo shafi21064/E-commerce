@@ -58,12 +58,14 @@ class _BestSalesProductState extends State<BestSalesProduct> {
                       itemProvider.setIsFavorite(index);
                       if(itemProvider.itemList[index]['is_favorite'] == true){
                         const snackBar = SnackBar(
+                            duration: Duration(seconds: 1),
                             backgroundColor: CustomColor.primaryColor,
                             content: Text('Added to Wishlist')
                         );
                         ScaffoldMessenger.of(context).showSnackBar(snackBar);
                       }else{
                         const snackBar = SnackBar(
+                            duration: Duration(seconds: 1),
                             backgroundColor: CustomColor.primaryColor,
                             content: Text('Remove from Wishlist')
                         );

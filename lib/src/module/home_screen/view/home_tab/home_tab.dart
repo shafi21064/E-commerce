@@ -30,6 +30,7 @@ class HomeTab extends StatelessWidget {
           ),
           SpaceInHeight(height: 14.h),
           const BestSalesProduct(),
+          SpaceInHeight(height: 14.h),
         ],
       ),
     );
