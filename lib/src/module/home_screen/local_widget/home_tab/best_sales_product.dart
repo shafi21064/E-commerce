@@ -40,6 +40,7 @@ class _BestSalesProductState extends State<BestSalesProduct> {
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
                 }
                 else{
+                  //itemProvider.removeFromCheckout(index);
                   const snackBar = SnackBar(
                       duration: Duration(seconds: 1),
                       backgroundColor: CustomColor.primaryColor,
@@ -53,6 +54,7 @@ class _BestSalesProductState extends State<BestSalesProduct> {
               pushNewScreen(
                 context,
                 screen: DetailsScreen(
+
                   onPress:(){
                     setState(() {
                       itemProvider.setIsFavorite(index);

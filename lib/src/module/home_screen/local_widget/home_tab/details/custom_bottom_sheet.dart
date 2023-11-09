@@ -104,8 +104,9 @@ class CustomBottomSheet extends StatelessWidget {
                     buttonName: 'Check Out',
                     nameColor: Colors.white,
                     onTap: (){
-                      Navigator.pop(context);
+                      //itemProvider.setAddToCart(index);
                       itemProvider.setIsCheckout(index);
+                      Navigator.pop(context);
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context)=>  CheckOut(
                             index: index,

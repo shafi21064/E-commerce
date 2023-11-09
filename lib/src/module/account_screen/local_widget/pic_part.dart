@@ -23,15 +23,13 @@ class PicturePart extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
-                  image: NetworkImage(
-                      'https://e1.pxfuel.com/desktop-wallpaper/928/355/desktop-wallpaper-sm-on-twitter-random-people.jpg'
-                  ),
+                  image: AssetImage('assets/images/me.jpg'),
                   fit: BoxFit.fill
                 )
               ),
             ),
             TextBold(
-                text: 'Jonathon Smith',
+                text: 'Md Shadikul Islam Shafi',
                 color: const Color(0xff404040),
                 fontSize: 16.sp
             ),

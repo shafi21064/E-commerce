@@ -22,7 +22,7 @@ class Cart extends StatelessWidget {
                     children: const [
                       BucketItemList()
                     ])),
-            CheckoutButton(),
+            const CheckoutButton(),
             SpaceInHeight(height: 10.h)
           ],
         ),

@@ -19,7 +19,7 @@ class ItemProvider extends ChangeNotifier {
       'is_favorite': false,
       'in_cart': false,
       'in_checkout': false,
-      'cart_count' : 1
+      'cart_count' : 1,
     },
     {
       'id' : 2,
@@ -194,6 +194,7 @@ class ItemProvider extends ChangeNotifier {
     else {
       _checkout.remove(item);
     }
+    print('this is checkout');
     print(_checkout.length);
     print(checkout);
     notifyListeners();
@@ -209,20 +210,20 @@ class ItemProvider extends ChangeNotifier {
 
 
   void setIsCheckout(index) {
-    if (_cartList[index]['in_checkout']) {
-      _cartList[index]['in_checkout'] = false;
+    if (itemList[index]['in_checkout']) {
+      itemList[index]['in_checkout'] = false;
       checkoutItem(_cartList[index]);
     } else {
-      _cartList[index]['in_checkout'] = true;
-      checkoutItem(_cartList[index]);
+      itemList[index]['in_checkout'] = true;
+      checkoutItem(itemList[index]);
     }
     notifyListeners();
   }
 
-  void allInCheckout(index){
-    _cartList[index]['in_checkout'] = true;
-    checkoutItem(_cartList[index]);
-  }
+  // void allInCheckout(index){
+  //   _cartList[index]['in_checkout'] = true;
+  //   checkoutItem(_cartList[index]);
+  // }
 
   /////////////////////////////===get total of checkout===////////////////////////
   double getTotalPrice() {
